@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My CadDog</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Connection">Internet Connection</string>
+    <string name="check">Please,check your internet connection</string>
+    <string name="ok">Ok</string>
+</resources>
