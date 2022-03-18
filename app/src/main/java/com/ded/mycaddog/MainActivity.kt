@@ -91,7 +91,6 @@ class MainActivity : AppCompatActivity() {
 
             yesClickListener = { dialog, which ->
                 dialog.dismiss()
-                //todo снова питаться загрузить
             },
 
             )

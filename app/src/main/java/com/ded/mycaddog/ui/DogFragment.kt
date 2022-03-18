@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import coil.load
 import com.ded.mycaddog.MainActivity
 import com.ded.mycaddog.R
 import com.ded.mycaddog.data.MainVM
@@ -18,8 +19,6 @@ class DogFragment : Fragment() {
     lateinit var imgDog: ImageView
     lateinit var mainActivity: MainActivity
 
-    //    lateinit var dogsUrl:String
-//    val instanceState = "INSTANCE_STATE"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainVM = ViewModelProvider(this)[MainVM::class.java]
@@ -39,7 +38,6 @@ class DogFragment : Fragment() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-//        outState.putString(instanceState, dogsUrl);
 
     }
 
@@ -59,7 +57,6 @@ class DogFragment : Fragment() {
         }
 
         mainVM.getMutableLiveData().observe(viewLifecycleOwner) { url ->
-//            dogsUrl = url
             imgDog.load(url)
             mainActivity.progressBar.visibility = View.INVISIBLE
         }
